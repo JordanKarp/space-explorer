@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background-color: slategrey;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+}
+
+canvas {
+    height: 1024px;
+    height: 576px;
+    background-color: white;
+}
