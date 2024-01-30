@@ -9,7 +9,7 @@ const io = new Server(server, { pingInterval: 2000, pingTimeout: 5000})
 const port = 4000
 
 const backEndPlayers = {}
-const THRUST = .02
+const THRUST = .05
 const TURN_SPEED = .05
 
 app.use(express.static('public'))

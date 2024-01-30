@@ -28,12 +28,22 @@ function init() {
   
   c.scale(devicePixelRatio, devicePixelRatio)
 
+
+  // for (let i=0; i<200; i++)
+  //   stars.push(new Star({
+  //     x: 2400 * Math.random() - 1200,
+  //     y: 2000 * Math.random() - 1000,
+  //     radius: 1,
+  //     distanceFactor: .2 * Math.random()
+  //   }))
   for (let i=0; i<400; i++)
     stars.push(new Star({
       x: 2400 * Math.random() - 1200,
       y: 2000 * Math.random() - 1000,
-      radius: 1
-      // radius: Math.ceil(2 * Math.random())
+      // radius: 2
+      radius: Math.ceil(2 * Math.random()),
+      distanceFactor: Math.random()
+      // distanceFactor: Math.round(5 * Math.random())
     }))
   
   setInterval(() => {
@@ -50,6 +60,7 @@ function init() {
       socket.emit('keydown', {keycode: 'ArrowRight'})
     }
     socket.emit('updatePlayer')
+    console.log(socket.id)
     GLOBALS.mapAnchor.x = -canvas.width/2 + frontEndPlayers[socket.id].x
     GLOBALS.mapAnchor.y = -canvas.height/2 + frontEndPlayers[socket.id].y
   }, 15)

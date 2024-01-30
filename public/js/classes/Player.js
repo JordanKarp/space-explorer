@@ -4,7 +4,7 @@ class Player {
         this.x = x
         this.y = y
         this.color = color
-        this.radius = 30
+        this.radius = 16
         this.velocity = {x:0, y:0}
         this.rotation = 0
         this.deltaRotation = 0
